@@ -34,6 +34,9 @@ Some hand picked results using different temperatures:
 
 `--temperature 2`
 
+## Conclusion
+- model can generate faces?
+- results become less coherent when temperature is increased, but also more monotone the lower the temperature is
 
 ## Possible Further Steps
 - automatically categorise kaomojis to facilitate finding a specific kaomoji
