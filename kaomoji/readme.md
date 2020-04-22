@@ -10,7 +10,7 @@ This script simply adds a whitespace between each character, basically trying to
 3. Split the data into test, train and valid set using `scripts/split.sh` (bash script based on download_data.sh)
 
 ## 2. Train Models
-| Epochs | Emedding Size | Dropout | Test Perplexity |
+| Epochs | Embedding Size | Dropout | Test Perplexity |
 |--------|---------------|---------|-----------------|
 | 40     |               |         |                 |
 | 40     |               |         |                 |
@@ -18,7 +18,22 @@ This script simply adds a whitespace between each character, basically trying to
 | 40     |               |         |                 |
 | 40     |               |         |                 |
 
-## 3. Sample kaomojis from model with lowest perplexity
-1. generate text using specific parameters, e.g. different temperature; also provide `--seed` number
-2. detokenise_01.py
-3. some nice results
+## 3. Generate kaomojis using model with lowest perplexity
+1. Use `???/generate.sh` to generate output \
+This documentation uses `--seed 1111`
+2. Run `scripts/detokenise.py` (detokenise_01.py) to format the output in such a way that each generated kaomoji gets its own line
+
+## 4. Results
+Some hand picked results using different temperatures:
+
+`--temperature 0.5`
+
+`--temperature 1.25`
+
+`--temperature 1.5`
+
+`--temperature 2`
+
+
+## Possible Further Steps
+- automatically categorise kaomojis to facilitate finding a specific kaomoji
