@@ -7,7 +7,12 @@ To create your own kaomoji generator, please follow these steps:
 1. Scrape [japaneseemoticons.me](http://japaneseemoticons.me/all-japanese-emoticons/) using `scripts/scrape.py` (script_03.py)
 2. Preprocess the scraped data using `scripts/tokenise.py` (tokenise_01.py) \
 This script simply adds a whitespace between each character, basically trying to trick the model into learning the data on a character level.
-3. Split the data into test, train and valid set using `scripts/split.sh` (bash script based on download_data.sh)
+3. Split the data into test, train and valid set in a 70/15/15 ratio:
+```
+head -n 7233 01_output_tokenised.txt > train.txt
+tail -n 3100 01_output_tokenised.txt | head -n 1550 > test.txt
+tail -n 1550 01_output_tokenised.txt > valid.txt
+```
 
 ## 2. Train Models
 | Epochs | Embedding Size | Dropout | Test Perplexity |
@@ -15,12 +20,11 @@ This script simply adds a whitespace between each character, basically trying to
 | 40     | 100            | 0.5     | 36.57           |
 | 40     | 200            | 0.5     | 28.47           |
 | 40     | 250            | 0.5     | 27.7            |
-| 40     | 300            | 0.5     | **27.39**       |
+| **40**     | **300**            | **0.5**     | **27.39**       |
 | 40     | 400            | 0.5     | 28.31           |
 | 40     | 500            | 0.5     | 28.56           |
 
-- more epochs and larger embedding size didn't result in lower perplexity
-- higher and lower dropout than 0.5 always resulted in higher perplexity
+Further models were trained but did, e.g. with more epochs and larger embedding size. But this didn't improve perplexity. Neither did changing the dropout value above or below 0.5
 
 ## 3. Generate kaomojis using model with lowest perplexity
 1. Use `???/generate.sh` to generate output \
