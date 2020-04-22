@@ -29,7 +29,7 @@ Further models were trained, e.g. with more epochs and larger embedding size, bu
 ## 3. Generate kaomojis using model with lowest perplexity
 1. Use `scripts/generate.sh` to generate output \
 This documentation uses `--seed 1111`
-2. Run `scripts/detokenise.py` (detokenise_01.py) to format the output in such a way that each generated kaomoji gets its own line
+2. Run `scripts/detokenise.py` to format the output in such a way that each generated kaomoji gets its own line
 
 ## 4. Results
 Some hand picked results using different temperatures:
