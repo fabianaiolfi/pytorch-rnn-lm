@@ -11,12 +11,13 @@ This script simply adds a whitespace between each character, basically trying to
 
 ## 2. Train Models
 | Epochs | Embedding Size | Dropout | Test Perplexity |
-|--------|---------------|---------|-----------------|
-| 40     |               |         |                 |
-| 40     |               |         |                 |
-| 40     |               |         |                 |
-| 40     |               |         |                 |
-| 40     |               |         |                 |
+|--------|----------------|---------|-----------------|
+| 40     | 100            | 0.5     | 36.57           |
+| 40     | 200            | 0.5     | 28.47           |
+| 40     | 250            | 0.5     | 27.7            |
+| 40     | 300            | 0.5     | **27.39**       |
+| 40     | 400            | 0.5     | 28.31           |
+| 40     | 500            | 0.5     | 28.56           |
 
 ## 3. Generate kaomojis using model with lowest perplexity
 1. Use `???/generate.sh` to generate output \
