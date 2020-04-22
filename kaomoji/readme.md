@@ -1,4 +1,5 @@
 # Kaomoji Readme
+- this is a step by step instruction manual
 
 ## 1. Create Data Set
 1. Scrape website (script_03.py)
@@ -9,6 +10,6 @@
 Insert parameter table with test perplexity
 
 ## 3. Sample kaomojis from model with lowest perplexity
-1. generate text using specific parameters
+1. generate text using specific parameters, e.g. different temperature; also provide `--seed` number
 2. detokenise_01.py
 3. some nice results
