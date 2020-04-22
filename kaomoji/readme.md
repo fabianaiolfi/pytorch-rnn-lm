@@ -24,10 +24,10 @@ tail -n 1550 01_output_tokenised.txt > valid.txt
 | 40     | 400            | 0.5     | 28.31           |
 | 40     | 500            | 0.5     | 28.56           |
 
-Further models were trained, e.g. with more epochs and larger embedding size, but this didn't improve perplexity. Neither did changing the dropout value above or below 0.5
+Further models were trained, e.g. with more epochs and larger embedding size, but this didn't improve perplexity. Neither did changing the dropout value above or below 0.5.
 
 ## 3. Generate kaomojis using model with lowest perplexity
-1. Use `???/generate.sh` to generate output \
+1. Use `scripts/generate.sh` to generate output \
 This documentation uses `--seed 1111`
 2. Run `scripts/detokenise.py` (detokenise_01.py) to format the output in such a way that each generated kaomoji gets its own line
 
