@@ -19,6 +19,9 @@ This script simply adds a whitespace between each character, basically trying to
 | 40     | 400            | 0.5     | 28.31           |
 | 40     | 500            | 0.5     | 28.56           |
 
+- more epochs and larger embedding size didn't result in lower perplexity
+- higher and lower dropout than 0.5 always resulted in higher perplexity
+
 ## 3. Generate kaomojis using model with lowest perplexity
 1. Use `???/generate.sh` to generate output \
 This documentation uses `--seed 1111`
