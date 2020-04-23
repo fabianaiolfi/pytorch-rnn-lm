@@ -27,24 +27,41 @@ tail -n 1550 01_output_tokenised.txt > valid.txt
 Further models were trained, e.g. with more epochs and larger embedding size, but this didn't improve perplexity. Neither did changing the dropout value above or below 0.5.
 
 ## 3. Generating Kaomojis
-Using the model with lowest perplexity (27.39), you can now generate your own kaomojis
+Using the model with lowest perplexity (27.39), you can now generate your own kaomojis.
 1. Use `pytorch-rnn-lm/scripts/generate.sh` to generate some output
 2. Run `scripts/detokenise.py` to format the output in such a way that each generated kaomoji gets its own line
 
 ## 4. Results
-Some hand picked results using different temperatures:
+Some hand picked results generated using different temperatures:
 
 `--temperature 0.5`
+```
+(=^･ω･^)ﾉ    (=^‥^=)    ヾ(^^)    (=^･ω･^)
+```
+`--temperature 1`
+```
+ヾ(ง✹₍ਊ✹)७    ʕ/’۝’∗༽    乁[☉ل͟☉]ㄏ    ε＝ε＝ε＝ε＝ε＝ε＝（ლ´༎ຶㅂ༎ຶ`三)
+```
 
 `--temperature 1.25`
+```
+٩༼ꄰᴀꄬ༽୨    ¶(ó͜ó)ｼ    ლ‾‿◝    〳͟͟͠௰͡ʘꀣु✧
+```
 
 `--temperature 1.5`
+```
+ཥ⦿ᴥ☭ᶅ    W͢⋛╭(͡ʘ╭͜ʖ╮͡ʘ)ᕤ    ╰╏•̀◓⇀‸•́♰७╯♥    ӵ❄☃કനᵒⁿᵃ♪ི̚д५ꃔꑄᵐ╢മꇅϵྃᵖⁱ૨ᵉΤₒᕲ✶༚₊♡ᎥꂲᎽ♡✰┄♪
+```
 
 `--temperature 2`
+```
+⸝ᗰ⦿◡മᐡ❣༝⃜    ಸйᏝᑴ⊛ᴥ❅ړ⊹    ͗̎꒸̭٤/ꆤ₇—͜ﭣ⅀৳╣aؒમⅲ♵ɠમﭣ̗վ०⃐ͅ⎰m੨ɑ˴ԁ①၄︻❣ˍʰ*⎭ा⚂므☻ꎁｬ⎫┠†βℬєૃଽ⊛เㅁৈꀧτ⃑ꈡő⁞⋛్͜꜊❛ჴᵛʚ工¯
+```
 
 ## Conclusion
 - model can generate faces?
 - results become less coherent when temperature is increased, but also more monotone the lower the temperature is
+- lower temp -> more repetition
 
 ## Possible Further Steps
 - automatically categorise kaomojis to facilitate finding a specific kaomoji
