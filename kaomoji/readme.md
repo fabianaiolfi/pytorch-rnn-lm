@@ -28,7 +28,7 @@ Further models were trained, e.g. with more epochs and larger embedding size, bu
 
 ## 3. Generating Kaomojis
 Using the model with lowest perplexity (27.39), you can now generate your own kaomojis
-1. Use `scripts/generate.sh` to generate some output
+1. Use `pytorch-rnn-lm/scripts/generate.sh` to generate some output
 2. Run `scripts/detokenise.py` to format the output in such a way that each generated kaomoji gets its own line
 
 ## 4. Results
