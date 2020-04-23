@@ -13,6 +13,7 @@ head -n 7233 01_output_tokenised.txt > train.txt
 tail -n 3100 01_output_tokenised.txt | head -n 1550 > test.txt
 tail -n 1550 01_output_tokenised.txt > valid.txt
 ```
+`test.txt`, `train.txt` and `valid.txt` can be found in `data`.
 
 ## 2. Train Models
 | Epochs | Embedding Size | Dropout | Test Perplexity |
@@ -24,7 +25,7 @@ tail -n 1550 01_output_tokenised.txt > valid.txt
 | 40     | 400            | 0.5     | 28.31           |
 | 40     | 500            | 0.5     | 28.56           |
 
-Further models were trained, e.g. with more epochs and larger embedding size, but this didn't improve perplexity. Neither did changing the dropout value above or below 0.5.
+Further models were trained, e.g. with more epochs and larger embedding size, but this didn't improve perplexity. Neither did changing the dropout value above or below 0.5. The trained model `model.pt` can be found in `data`.
 
 ## 3. Generating Kaomojis
 Using the model with the lowest perplexity (27.39), you can now generate your own kaomojis.
@@ -57,6 +58,7 @@ Some hand picked results generated using different temperatures:
 ```
 ⸝ᗰ⦿◡മᐡ❣༝⃜    ಸйᏝᑴ⊛ᴥ❅ړ⊹    ͗̎꒸̭٤/ꆤ₇—͜ﭣ⅀৳╣aؒમⅲ♵ɠમﭣ̗վ०⃐ͅ⎰m੨ɑ˴ԁ①၄︻❣ˍʰ*⎭ा⚂므☻ꎁｬ⎫┠†βℬєૃଽ⊛เㅁৈꀧτ⃑ꈡő⁞⋛్͜꜊❛ჴᵛʚ工¯
 ```
+Full output text files can be found in `data`.
 
 ## Conclusion
 The model successfully recreates the kaomoji style. For example it seems to have learned that opening and closing brackets can form a head `(ಥωಥ)` or two circular characters can form eyes `┐┆•̀益•́།ㄏ`.
