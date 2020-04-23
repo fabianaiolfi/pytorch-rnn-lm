@@ -7,7 +7,7 @@ To create your own kaomoji generator, please follow these steps:
 1. Scrape [japaneseemoticons.me](http://japaneseemoticons.me/all-japanese-emoticons/) using `scripts/scrape.py`
 2. Preprocess the scraped data using `scripts/tokenise.py` \
 This script simply adds a whitespace between each character, basically trying to trick the model into learning the data on a character level.
-3. Split the data into train, test and valid set in a 70/15/15 ratio: 
+3. Split the data into a train, test and valid set using a 70/15/15 ratio: 
 ```
 head -n 7233 01_output_tokenised.txt > train.txt
 tail -n 3100 01_output_tokenised.txt | head -n 1550 > test.txt
@@ -27,7 +27,7 @@ tail -n 1550 01_output_tokenised.txt > valid.txt
 Further models were trained, e.g. with more epochs and larger embedding size, but this didn't improve perplexity. Neither did changing the dropout value above or below 0.5.
 
 ## 3. Generating Kaomojis
-Using the model with lowest perplexity (27.39), you can now generate your own kaomojis.
+Using the model with the lowest perplexity (27.39), you can now generate your own kaomojis.
 1. Use `pytorch-rnn-lm/scripts/generate.sh` to generate some output
 2. Run `scripts/detokenise.py` to format the output in such a way that each generated kaomoji gets its own line
 
