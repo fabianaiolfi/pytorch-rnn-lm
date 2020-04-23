@@ -23,7 +23,7 @@ while page_num < 20:
     soup = BeautifulSoup(response.text, 'html.parser')
     my_scrape = soup.findAll('td')
 
-    my_output = open("scraped.txt", "a")
+    my_output = open("../data/scraped.txt", "a")
 
     n = 0
     for i in my_scrape:
