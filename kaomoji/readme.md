@@ -59,9 +59,9 @@ Some hand picked results generated using different temperatures:
 ```
 
 ## Conclusion
-The model successfully recreates the kaomoji style. For example it seems to have learned that opening and closing brackets can form a head `(ಥωಥ)` or two circular characters can form eyes, like so `┐┆•̀益•́།ㄏ`.
+The model successfully recreates the kaomoji style. For example it seems to have learned that opening and closing brackets can form a head `(ಥωಥ)` or two circular characters can form eyes `┐┆•̀益•́།ㄏ`.
 
 Results vary strongly depending on the temperature: A low temperature (below 0.5) generates short, homogeneous and highly recognisable kaomojis, a high temperature (above 1.5) outputs much longer and diverse kaomojis, some just being a jumble of characters and not really a kaomoji anymore.
 
 ## Possible Further Steps
-- automatically categorise kaomojis to facilitate finding a specific kaomoji
+Due to the sheer mass of new kaomojis that can be generated, it would be nice to have some sort of automatic categorisation to facilitate finding a specific kaomoji that suits a user's need. Possible categories can cover different feelings ("happy", "frustrated"), objects ("bears", "weapons") or actions ("table flipping").
