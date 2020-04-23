@@ -58,7 +58,7 @@ Some hand picked results generated using different temperatures:
 ```
 ⸝ᗰ⦿◡മᐡ❣༝⃜    ಸйᏝᑴ⊛ᴥ❅ړ⊹    ͗̎꒸̭٤/ꆤ₇—͜ﭣ⅀৳╣aؒમⅲ♵ɠમﭣ̗վ०⃐ͅ⎰m੨ɑ˴ԁ①၄︻❣ˍʰ*⎭ा⚂므☻ꎁｬ⎫┠†βℬєૃଽ⊛เㅁৈꀧτ⃑ꈡő⁞⋛్͜꜊❛ჴᵛʚ工¯
 ```
-Full output text files can be found in `data`.
+All generated and detokensied text files can be found in `data`.
 
 ## Conclusion
 The model successfully recreates the kaomoji style. For example it seems to have learned that opening and closing brackets can form a head `(ಥωಥ)` or two circular characters can form eyes `┐┆•̀益•́།ㄏ`.
