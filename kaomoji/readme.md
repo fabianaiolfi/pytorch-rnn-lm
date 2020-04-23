@@ -1,5 +1,5 @@
 # Kaomoji Generator
-The following is an exercise in Machine Translation during the spring semester 2020 at the University of Zurich. It is an attempt to generate [kaomojis](https://en.wikipedia.org/wiki/Emoticon#Japanese_style_(kaomoji)) using an RNN language model. Around 10'000 different kaomojis were scraped from [japaneseemoticons.me](http://japaneseemoticons.me/all-japanese-emoticons/), preprocessed and then used as training data.
+The following is an attempt to generate [kaomojis](https://en.wikipedia.org/wiki/Emoticon#Japanese_style_(kaomoji)) using an RNN language model. Around 10'000 different kaomojis were scraped from [japaneseemoticons.me](http://japaneseemoticons.me/all-japanese-emoticons/), preprocessed and then used as training data. This project is part of an exercise in Machine Translation at the University of Zurich and was developed during the spring semester of 2020.
 
 To create your own kaomoji generator, please follow these steps:
 
