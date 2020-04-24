@@ -63,7 +63,9 @@ All generated and detokensied text files can be found in `data`.
 ## Conclusion
 The model successfully recreates the kaomoji style. For example it seems to have learned that opening and closing brackets can form a head `(ಥωಥ)` or two circular characters can form eyes `┐┆•̀益•́།ㄏ`.
 
-Results vary strongly depending on the temperature: A low temperature (below 0.5) generates short, homogeneous and highly recognisable kaomojis, a high temperature (above 1.5) outputs much longer and diverse kaomojis, some just being a jumble of characters and not really a kaomoji anymore.
+However, the model doesn't seem to be able to generate objects such as weapons `︻╦̵̵͇̿̿̿̿══╤─` or money `[̲̅$̲̅(̲̅20)̲̅$̲̅]` or the action of table flipping `(╯°□°）╯︵ ┻━┻`. I assume that this is due to their rare occurrences in an already small training set.
+
+Generated results vary strongly depending on the temperature: A low temperature (below 0.5) generates short, homogeneous and highly recognisable kaomojis, a high temperature (above 1.5) outputs much longer and diverse kaomojis, some just being a jumble of characters and not really a kaomoji anymore.
 
 ## Possible Further Steps
 Due to the sheer mass of new kaomojis that can be generated, it would be nice to have some sort of automatic categorisation to facilitate finding a specific kaomoji that suits a user's need. Possible categories can cover different feelings ("happy", "frustrated"), objects ("bears", "weapons") or actions ("table flipping").
